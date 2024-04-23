@@ -4,19 +4,19 @@ import React from "react";
 import { useState } from "react";
 
 export default function page() {
-  let [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(0);
 
   const addValue = () => {
     if (counter < 20) {
-      counter = counter + 1;
-      setCounter(counter);
+      // counter = counter + 1;
+      setCounter(counter +1);
     }
   };
 
   const substractValue = () => {
     if (counter > 0) {
-      counter = counter - 1;
-      setCounter(counter);
+      // counter = counter - 1;
+      setCounter(counter -1);
     }
   };
 
@@ -30,13 +30,13 @@ export default function page() {
           onClick={addValue}
           className="m-4 text-4xl  p-8 text-white bg-green-500 font-extrabold rounded-lg shadow-xl "
         >
-          +
+          ⬆️
         </button>
         <button
           onClick={substractValue}
           className="m-4 p-8 text-4xl  text-white bg-yellow-500 font-extrabold rounded-lg shadow-xl "
         >
-          -
+          ⬇️
         </button>
         <div className="m-4 p-8 text-white text-4xl  bg-red-500 font-extrabold rounded-lg shadow-xl ">
           {" "}
