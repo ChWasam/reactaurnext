@@ -34,9 +34,9 @@ export default function page() {
 
   const copyPassword = useCallback(() => {
     passwordReference.current?.select();
-    passwordReference.current?.setSelectionRange(0,3);
+    passwordReference.current?.setSelectionRange(0,6);
     let passwordValue = ""
-    for(let i=0 ; i<3; i++){
+    for(let i=0 ; i<6; i++){
     passwordValue += Password[i]
     }
     window.navigator.clipboard.writeText(passwordValue);
