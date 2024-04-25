@@ -34,10 +34,12 @@ export default function page() {
 
   const copyPassword = useCallback(() => {
     passwordReference.current?.select();
-    let selectedPassword = passwordReference.current?.setSelectionRange(0,3);
-    passwordValue = ""
-    for(let i=0 ; i<3; i++)
-    window.navigator.clipboard.writeText(selectedPassword);
+    passwordReference.current?.setSelectionRange(0,3);
+    let passwordValue = ""
+    for(let i=0 ; i<3; i++){
+    passwordValue += Password[i]
+    }
+    window.navigator.clipboard.writeText(passwordValue);
   }, [Password]);
 
   useEffect(() => {
