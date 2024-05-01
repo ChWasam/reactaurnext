@@ -42,9 +42,9 @@ export default function page() {
     window.navigator.clipboard.writeText(passwordValue);
   }, [Password]);
 
-  useEffect(() => {
+  useEffect(() => { 
     passwordGenerator();
-  }, [passwordLength, numberAllowed, specialCharacterAllowed]);
+  }, [passwordLength, numberAllowed, specialCharacterAllowed,passwordGenerator]);
 
   return (
     <main className=" flex flex-col bg-gradient-to-tr from-purple-700 to-red-700 w-screen h-screen  ">
@@ -131,5 +131,9 @@ export default function page() {
 //  Got an error
 //Error: Too many re-renders. React limits the number of renders to prevent an infinite loop.
 // Too many re-renders ka matlab yeh ha kah buhat sari cheezain asi han jin ka tabdeel hona sa result tabdeel ho ga
-// to han useCallback hook use karain ga ta kah thori si cheezain h=jo wo cache/ memory me yad rakh saka wo rakh la aur baqi to ausa karni hi para ge
+// to ham useCallback hook use karain ga ta kah thori si cheezain ho jo wo cache/ memory me yad rakh saka wo rakh la aur baqi to ausa karni hi para ge
 // is sa code optimise ho jai ga
+// Memoization ka concept ha kah ak value dependency me asi da do kah jahan value password ke set ho rahi ha 
+// Callback function ko run karna ka lia responsible nahi ha aus ko memoise karna ka lia responsible ha 
+// callback ke dependencies => optimisation ka lia 
+// use effect ke dependencies => is me khuch bhi change ho to dobara run kar do 
