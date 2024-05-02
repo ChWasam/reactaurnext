@@ -28,7 +28,8 @@
     ".next/types/**/*.ts",
     "app/1_Counter_hooks/page.jsx",
     "app/2_bg_changer/page.jsx",
-    "app/3_password_generator/page.jsx"
+    "app/3_password_generator/page.jsx",
+    "app/4_currency_converter/page.jsx"
   ],
   "exclude": ["node_modules"]
 }
