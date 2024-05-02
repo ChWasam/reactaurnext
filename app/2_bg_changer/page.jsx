@@ -8,35 +8,35 @@ export default function page() {
     "flex flex-col justify-start h-screen w-screen bg-emerald-500"
   );
   const greenBG = () => {
-    setBgColor("flex flex-col justify-start h-screen w-screen bg-green-800");
+    setBgColor("justify-start bg-green-800");
   };
   const yelloBG = () => {
-    setBgColor("flex flex-col justify-center h-screen w-screen bg-yellow-500");
+    setBgColor("justify-center bg-yellow-500");
   };
   const blueBG = () => {
-    setBgColor("flex flex-col justify-end h-screen w-screen bg-blue-800");
+    setBgColor("justify-end bg-blue-800");
   };
   const blackBG = () => {
-    setBgColor("flex flex-col justify-center h-screen w-screen bg-black");
+    setBgColor("justify-center bg-black");
   };
   const purpleBG = () => {
-    setBgColor("flex flex-col justify-start h-screen w-screen bg-purple-800");
+    setBgColor("justify-start bg-purple-800");
   };
   const limeBG = () => {
-    setBgColor("flex flex-col justify-center h-screen w-screen bg-lime-400");
+    setBgColor("justify-center  bg-lime-400");
   };
   const orangeBG = () => {
-    setBgColor("flex flex-col justify-end h-screen w-screen bg-orange-500");
+    setBgColor("justify-end bg-orange-500");
   };
   const redBG = () => {
-    setBgColor("flex flex-col justify-center h-screen w-screen bg-red-500");
+    setBgColor("justify-center  bg-red-500");
   };
   const pinkBG = () => {
-    setBgColor("flex flex-col justify-start  h-screen w-screen bg-pink-500");
+    setBgColor(" justify-start bg-pink-500");
   };
 
   return (
-    <main className={bgColor}>
+    <main className={`flex flex-col justify-start h-screen w-screen ${bgColor}`}>
       <div className="flex gap-x-4 mx-auto bg-white rounded-3xl shadow-lg ">
         <button
           className="bg-green-800  px-4   rounded-3xl m-2"
